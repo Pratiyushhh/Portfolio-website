@@ -12,6 +12,7 @@ const portfolioData = {
     "github": "https://github.com/Pratiyushhh",
     "profilePhoto": "assets/IMG_0701.jpg",
     "resumeLink": "assets/Pratiyush_Resume.pdf",
+    "intro": "I'm a detail-oriented data analyst and business intelligence consultant with a proven track record of delivering C-level insights that drive measurable business impact. My work transforms raw data into strategic competitive advantage, serving executives, product managers, and business stakeholders with implementation-ready intelligence.",
     "summary": "Google Certified Data Analyst with a proven ability to develop effective Power BI dashboards from concept to deployment. Adept at the full data analysis lifecycle: transforming and cleaning raw data, performing exploratory analysis, and running complex SQL queries to define key performance metrics."
   },
   "skills": [
@@ -97,7 +98,7 @@ const portfolioData = {
   }
 };
 
-// Enhanced utility function for smooth scrolling
+// Utility function for smooth scrolling
 const scrollToElement = (elementId) => {
   setTimeout(() => {
     const element = document.querySelector(elementId);
@@ -144,7 +145,7 @@ const Navigation = () => {
           onClick={(e) => handleNavClick('#home', e)}
           style={{ cursor: 'pointer' }}
         >
-          PK
+          Portfolio
         </a>
         
         <button 
@@ -176,7 +177,7 @@ const Navigation = () => {
   );
 };
 
-// Hero Section Component with three buttons
+// Hero Section Component
 const HeroSection = () => {
   const { personalInfo } = portfolioData;
   
@@ -208,7 +209,7 @@ const HeroSection = () => {
             <div className="hero-content">
               <h1 className="animate-fade-in">Hi, I'm {personalInfo.name}</h1>
               <h2 className="animate-fade-in animate-delay-1">{personalInfo.title}</h2>
-              <p className="animate-fade-in animate-delay-2">{personalInfo.summary}</p>
+              <p className="animate-fade-in animate-delay-2">{personalInfo.intro}</p>
               <div className="hero-buttons animate-fade-in animate-delay-3">
                 <button 
                   className="btn-glass btn-primary" 
@@ -232,7 +233,7 @@ const HeroSection = () => {
                   type="button"
                 >
                   <i className="fas fa-envelope"></i>
-                  Get in Touch
+                  Let's Connect!
                 </button>
               </div>
             </div>
@@ -321,7 +322,7 @@ const AboutSection = () => {
   );
 };
 
-// Skills Section Component with enhanced text visibility
+// Skills Section Component
 const SkillsSection = () => {
   const { skills } = portfolioData;
   
@@ -423,7 +424,7 @@ const ExperienceSection = () => {
   );
 };
 
-// Projects Section Component with enhanced structure
+// Projects Section Component
 const ProjectsSection = () => {
   const { projects } = portfolioData;
   
@@ -464,11 +465,11 @@ const ProjectsSection = () => {
               <div className={`project-card animate-delay-${index + 1}`}>
                 <div className="project-card-body">
                   <div className="project-title">
-                    {/* Project Title - Large, bold heading */}
+                    {/* Project Title */}
                     <h4>{project.title}</h4>
                   </div>
 
-                  {/* Tech Stack - Styled badges/pills */}
+                  {/* Tech Stack */}
                   <div className="project-tools">
                     {project.tools.map((tool, toolIndex) => (
                       <span key={toolIndex} className="tool-tag">
@@ -477,7 +478,7 @@ const ProjectsSection = () => {
                     ))}
                   </div>
                     
-                  {/* Project Description - Clean achievements */}
+                  {/* Project Description - achievements */}
                   <div className="project-achievements">
                     <ul class="styled-ul">
                       {project.achievements.map((achievement, achIndex) => (
@@ -488,7 +489,7 @@ const ProjectsSection = () => {
                     </ul>
                   </div>
                   
-                  {/* Button Section - Fixed at bottom */}
+                  {/* Button Section */}
                   <div className="project-buttons">
                     <button 
                       className="btn-glass btn-glass-small"
@@ -583,7 +584,7 @@ const ContactSection = () => {
     <section id="contact" className="section section-animate">
       <div className="container">
         <div className="section-title">
-          <h2>Get In Touch</h2>
+          <h2>Let's Connect!</h2>
         </div>
         <div className="row">
           <div className="col-lg-10 mx-auto">
@@ -686,7 +687,7 @@ const ContactSection = () => {
 // Main App Component
 const App = () => {
   useEffect(() => {
-    // Add padding top to body to account for fixed navbar
+    // Padding top to body to account for fixed navbar
     document.body.style.paddingTop = '80px';
     
     // Ensure smooth scrolling is enabled
