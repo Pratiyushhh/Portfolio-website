@@ -737,9 +737,7 @@ select.form-control {
     format('woff2');
 }
 
-/* END PERPLEXITY DESIGN SYSTEM */
 /* Additional styles for glassmorphism portfolio */
-
 body {
   background: linear-gradient(135deg, var(--color-slate-900) 0%, var(--color-charcoal-700) 50%, var(--color-slate-900) 100%);
   min-height: 100vh;
@@ -1043,7 +1041,7 @@ body::before {
 
 .section-title {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 5rem;
 }
 
 .section-title h2 {
@@ -1330,7 +1328,7 @@ body::before {
 }
 
 .contact-separator {
-  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .social-links {
@@ -1410,6 +1408,12 @@ body::before {
   .project-buttons .btn-glass {
     flex: none;
     width: 100%;
+  }
+
+  .contact-separator {
+    border-right: none;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   }
 }
 

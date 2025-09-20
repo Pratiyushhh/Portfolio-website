@@ -588,7 +588,7 @@ const ContactSection = () => {
         <div className="row">
           <div className="col-lg-10 mx-auto">
             <div className="row">
-              <div className="col-md-6 px-5">
+              <div className="col-md-6 contact-separator px-4">
                 <div className="contact-form animate-delay-1">
                   <form onSubmit={handleSubmit}>
                     <div className="mb-3">
@@ -631,7 +631,7 @@ const ContactSection = () => {
                   </form>
                 </div>
               </div>
-              <div className="col-md-6 contact-separator px-5">
+              <div className="col-md-6 p-5">
                 <div className="contact-info animate-delay-2">
                   <h4>Contact Information</h4>
                   <div className="contact-item">
